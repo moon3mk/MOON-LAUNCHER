@@ -1,0 +1,28 @@
+* { box-sizing:border-box }
+body {
+ margin:0;background:#090711;color:#f5f1ff;
+ font-family:Arial,sans-serif;display:flex;min-height:100vh
+}
+aside {
+ width:235px;background:#100d1c;padding:30px 20px;
+ border-right:1px solid #29203d
+}
+aside h1 {color:#b78aff;letter-spacing:3px}
+aside p,header {color:#988ba9;font-size:12px}
+nav {margin-top:55px}
+nav div {padding:16px 12px;margin:8px 0;color:#aaa0b9}
+nav .active {background:#281b40;color:#c69cff;border-left:3px solid #a45cff}
+main {flex:1;padding:30px 45px}
+header {display:flex;justify-content:space-between}
+.hero {
+ margin-top:45px;padding:65px 50px;border:1px solid #49316b;
+ border-radius:20px;
+ background:radial-gradient(ellipse at 80% 20%,#39205d,#171022 55%,#100c19)
+}
+.hero p:first-child,.hero span {color:#bd8aff}
+.hero h2 {font-size:48px}
+button {margin-top:25px;padding:16px 28px;border:0;border-radius:8px;background:#9b54ed;color:white;font-weight:bold}
+.cards {display:flex;gap:18px}
+article {flex:1;background:#151020;border:1px solid #30233f;border-radius:12px;padding:22px}
+article h2 {color:#bc8aff}
+article p {color:#8f849e;font-size:13px}
