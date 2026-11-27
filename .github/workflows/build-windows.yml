@@ -1,4 +1,4 @@
-name: Build MOON Launcher for Windows
+name: Build MOON3MK Windows
 
 on:
   workflow_dispatch:
@@ -10,13 +10,14 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: Checkout project
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -27,5 +28,6 @@ jobs:
       - name: Upload EXE files
         uses: actions/upload-artifact@v4
         with:
-          name: MOON-Windows
-          path: dist/
+          name: MOON3MK-Windows
+          path: dist/*.exe
+          if-no-files-found: error

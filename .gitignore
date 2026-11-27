@@ -1,3 +1,6 @@
 node_modules/
 dist/
+.gradle/
+build/
+*.backup
 .DS_Store

@@ -2,101 +2,131 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MOON Launcher</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOON3MK PREMIUM</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="background-glow"></div>
+
 <aside class="sidebar">
-    <div class="logo">🌙 MOON</div>
-    <p class="subtitle">MINECRAFT LAUNCHER</p>
+  <div class="logo">☾ <span>MOON</span><small>3MK</small></div>
+  <div class="edition">PREMIUM SUBSCRIBER</div>
 
-    <nav>
-        <a class="active" href="#home">⌂ <span>Home</span></a>
-        <a href="#versions">▦ <span>Versions</span></a>
-        <a href="#mods">⬇ <span>Mods Store</span></a>
-        <a href="#packs">◈ <span>Resource Packs</span></a>
-        <a href="#shaders">✧ <span>Shaders</span></a>
-        <a href="#settings">⚙ <span>Settings</span></a>
-    </nav>
+  <nav>
+    <a class="active" href="#home">⌂ <span>Dashboard</span></a>
+    <a href="#activation">♙ <span>Activation</span></a>
+    <a href="#client">◈ <span>Client</span></a>
+    <a href="#settings">⚙ <span>Settings</span></a>
+  </nav>
 
-    <div class="sidebar-bottom">
-        <span class="online-dot"></span>
-        MOON SYSTEM ONLINE
-        <small>VERSION 1.0.0</small>
-    </div>
+  <div class="sidebar-bottom">
+    <span class="dot"></span> SYSTEM READY
+    <small>MOON VERSION 1.0.0</small>
+  </div>
 </aside>
 
-<main id="home">
-    <header>
-        <div class="breadcrumb">HOME / DASHBOARD</div>
-        <div class="profile">
-            <span class="online-dot"></span>
-            MOON CLIENT
-        </div>
-    </header>
+<main>
+<header>
+  <div>
+    <small>MOON3MK / PREMIUM</small>
+    <h2>Subscriber Portal</h2>
+  </div>
+  <div class="profile">☾ MOON MEMBER</div>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <span class="tag">✦ YOUR WORLD STARTS HERE</span>
-            <p class="welcome">WELCOME TO THE MOON</p>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="tag">✦ PREMIUM EDITION</span>
+    <p class="welcome">WELCOME TO THE MOON</p>
+    <h1>YOUR WORLD.<br><span>YOUR RULES.</span></h1>
+    <p class="description">Experience Minecraft with MOON3MK CLIENT.</p>
+    <button onclick="goTo('activation')">ACTIVATE MEMBERSHIP →</button>
+  </div>
+  <div class="moon-art">
+    <div class="moon"></div>
+    <div class="orbit one"></div>
+    <div class="orbit two"></div>
+    <span class="star">✦</span>
+  </div>
+</section>
 
-            <h1>Your Minecraft.<br>
-                <span>Your Universe.</span>
-            </h1>
+<section class="stats">
+  <div class="stat">
+    <small>CLIENT</small>
+    <h3>MOON3MK</h3>
+    <span>Premium Edition</span>
+  </div>
+  <div class="stat">
+    <small>LICENSE</small>
+    <h3 id="licenseStatus">NOT ACTIVATED</h3>
+    <span>Waiting for server verification</span>
+  </div>
+  <div class="stat">
+    <small>VERSION</small>
+    <h3>1.0.0</h3>
+    <span>Latest build</span>
+  </div>
+</section>
 
-            <p class="description">
-                One launcher. Everything you need.
-            </p>
+<section class="panel" id="activation">
+  <div class="panel-title">
+    <span>01 / MEMBERSHIP</span>
+    <h2>License Activation</h2>
+    <p>Enter your private MOON3MK activation key.</p>
+  </div>
 
-            <button id="playBtn">▶ &nbsp; PLAY MINECRAFT</button>
-        </div>
+  <input id="licenseKey" type="text"
+    placeholder="XXXX-XXXX-XXXX-XXXX"
+    maxlength="40">
 
-        <div class="moon-art">
-            <div class="moon-circle"></div>
-            <span class="orbit orbit-one"></span>
-            <span class="orbit orbit-two"></span>
-            <span class="star star-one">✦</span>
-            <span class="star star-two">✧</span>
-        </div>
-    </section>
+  <button id="activateBtn">VERIFY LICENSE</button>
+  <p id="status">Waiting for activation server configuration.</p>
+  <small class="security">ONE LICENSE • ONE DEVICE</small>
+</section>
 
-    <section class="section-heading">
-        <div>
-            <h2>QUICK ACCESS</h2>
-            <p>Everything you need in one place.</p>
-        </div>
-    </section>
+<section class="panel client-panel" id="client">
+  <div class="panel-title">
+    <span>02 / GAMING</span>
+    <h2>MOON CLIENT</h2>
+    <p>Your Minecraft client installation.</p>
+  </div>
 
-    <section class="cards">
-        <article id="versions">
-            <div class="card-icon">▦</div>
-            <h3>Versions</h3>
-            <p>Manage your Minecraft versions.</p>
-            <a href="#versions">OPEN →</a>
-        </article>
+  <div class="client-info">
+    <div class="client-icon">☾</div>
+    <div>
+      <h3>MOON3MK CLIENT</h3>
+      <small>Fabric • Minecraft 1.21.11</small>
+    </div>
+  </div>
 
-        <article id="mods">
-            <div class="card-icon">⬇</div>
-            <h3>Mods Store</h3>
-            <p>Discover and manage your mods.</p>
-            <a href="#mods">OPEN →</a>
-        </article>
+  <button id="playBtn" disabled>INSTALL & PLAY</button>
+  <p class="muted">Available after successful license verification and client installation.</p>
+</section>
 
-        <article id="packs">
-            <div class="card-icon">◈</div>
-            <h3>Resource Packs</h3>
-            <p>Customize your Minecraft world.</p>
-            <a href="#packs">OPEN →</a>
-        </article>
-    </section>
+<section class="panel" id="settings">
+  <div class="panel-title">
+    <span>03 / PREFERENCES</span>
+    <h2>Settings</h2>
+    <p>MOON3MK Launcher configuration.</p>
+  </div>
+  <div class="setting-row">
+    <span>Application</span>
+    <b>MOON3MK PREMIUM</b>
+  </div>
+  <div class="setting-row">
+    <span>Version</span>
+    <b>1.0.0</b>
+  </div>
+  <div class="setting-row">
+    <span>License security</span>
+    <b>SERVER REQUIRED</b>
+  </div>
+</section>
 
-    <footer>
-        <span>🌙 MOON LAUNCHER</span>
-        <span>MADE FOR YOUR UNIVERSE</span>
-    </footer>
+<footer>☾ MOON3MK PREMIUM <span>MADE FOR YOUR UNIVERSE</span></footer>
 </main>
-
+<script src="renderer.js"></script>
 </body>
 </html>

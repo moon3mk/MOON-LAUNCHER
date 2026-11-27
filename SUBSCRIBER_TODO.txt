@@ -1,0 +1,25 @@
+MOON3MK PREMIUM - SUBSCRIBER VERSION
+VERSION: 1.0.0
+
+[✓] Create Loader Project
+[✓] Setup Java 21 and Gradle
+[✓] Create Private GitHub Repository
+[✓] Setup GitHub Actions
+[ ] Complete Premium Loader GUI
+[ ] Connect Loader to MOON-SERVER
+[ ] Implement License Key Activation
+[ ] One License Per Device
+[ ] Block Second Device Activation
+[ ] Save Activation Permanently
+[ ] Secure License Verification
+[ ] Automatic Client Download
+[ ] Automatic Client Installation
+[ ] Automatic Client Launch
+[ ] Build Windows EXE
+[ ] Test Activation System
+[ ] Test Full Client
+[ ] Prepare Final Subscriber Release
+
+FINAL GOAL:
+MOON3MK PREMIUM SUBSCRIBER
+STATUS: IN DEVELOPMENT
