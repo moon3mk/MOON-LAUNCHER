@@ -1,0 +1,36 @@
+name: Build MOON3MK Windows Loader
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout private source
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build loader
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Install WiX
+        shell: powershell
+        run: choco install wixtoolset --yes --no-progress
+
+      - name: Create Windows EXE
+        shell: powershell
+        run: |
+          gradle clean build
+          jpackage --type exe --name "MOON3MK Loader" --input build/libs --main-jar MOON3MK-Loader-1.0.0.jar --main-class dev.moon.loader.Main --dest dist --app-version 1.0.0 --vendor MOON3MK
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: MOON3MK-Windows-Loader
+          path: dist/*.exe
